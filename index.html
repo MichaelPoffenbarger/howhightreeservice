@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How High Tree Service LLC</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Fonts -->
+    <link href="https://db.onlinewebfonts.com/c/754f77077b9c8ec931b67d31ef4543bb?family=Aerokids" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/aerokids" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-green: #2A9D3A;
+            --dark-bg: #000000;
+            --light-text: #ffffff;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+        }
+
+        .script-font {
+            font-family: 'Aerokids', cursive;
+            font-size: 3.5rem;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.95) !important;
+            border-bottom: 2px solid var(--primary-green);
+        }
+
+        .navbar-brand img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .navbar-brand .brand-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .navbar-brand .script-font {
+            font-size: 2rem;
+            color: var(--primary-green);
+        }
+
+        .navbar-brand .llc-text {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .hero {
+            background: none;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+            
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, var(--dark-bg), transparent);
+        }
+
+        .service-card {
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-green);
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--light-text);
+            padding: 2rem;
+            border-radius: 15px;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(42, 157, 58, 0.3);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .review-card {
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--light-text);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-green);
+            padding: 2rem;
+            height: 100%;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(42, 157, 58, 0.3);
+        }
+
+        .contact-form {
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--light-text);
+            border-radius: 15px;
+            padding: 2.5rem;
+            border: 2px solid var(--primary-green);
+        }
+
+        .btn-custom {
+            background-color: var(--primary-green);
+            color: var(--light-text);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #238C31;
+            color: var(--light-text);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(42, 157, 58, 0.4);
+        }
+
+        .quality-seal {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            position: relative;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .quality-seal img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .section-title {
+            color: var(--primary-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: var(--primary-green);
+        }
+
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--primary-green);
+            color: var(--light-text);
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary-green);
+            color: var(--light-text);
+            box-shadow: 0 0 0 0.25rem rgba(42, 157, 58, 0.25);
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 999;
+        }
+
+        .about-image {
+            border-radius: 15px;
+            border: 3px solid var(--primary-green);
+        }
+
+        .feature-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        footer {
+            border-top: 2px solid var(--primary-green);
+        }
+
+        .animated-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .animated-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                background-size: cover;
+                background-position: center;
+                background-size: 97%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/logo.png" alt="How High Tree Service Logo" class="logo">
+                <div class="brand-text">
+                    <span class="script-font">How High</span>
+                    <span class="llc-text">TREE SERVICE LLC</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="text-white">Welcome to How High Tree Service LLC</h1>
+                    <p class="text-white">Your trusted partner in professional tree care.</p>
+                    <a href="#contact" class="btn btn-custom btn-lg animated-text" style="font-style: italic;">Get Your Free Quote</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/logo.png" alt="How High Tree Service Logo" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card text-center">
+                        <div class="service-icon">🌳</div>
+                        <h3 class="h4 mb-3">Tree Trimming</h3>
+                        <p>Expert trimming services to maintain tree health and enhance property aesthetics</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card text-center">
+                        <div class="service-icon">🪓</div>
+                        <h3 class="h4 mb-3">Tree Removal</h3>
+                        <p>Safe and efficient removal of damaged or unwanted trees</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card text-center">
+                        <div class="service-icon">🌲</div>
+                        <h3 class="h4 mb-3">Stump Grinding</h3>
+                        <p>Complete stump removal services for a clean and safe yard</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card text-center">
+                        <div class="service-icon">🚨</div>
+                        <h3 class="h4 mb-3">Emergency Service</h3>
+                        <p>24/7 emergency response for storm damage and hazardous situations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                         alt="About Us" 
+                         class="img-fluid about-image">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="lead mb-4">With years of experience and dedication to quality, How High Tree Service LLC is your trusted partner in professional tree care.</p>
+                    <ul class="feature-list list-unstyled">
+                        <li>Licensed & Fully Insured</li>
+                        <li>Experienced & Professional Team</li>
+                        <li>Modern Equipment & Techniques</li>
+                        <li>Safety-First Approach</li>
+                        <li>Satisfaction Guaranteed</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-custom mt-4">Schedule Service</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Customer Reviews</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="mb-3">"Outstanding service! The team was professional, efficient, and left our property spotless. Highly recommend!"</p>
+                        <p class="fw-bold mb-0">- John Anderson</p>
+                        <small class="text-muted">Residential Client</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="mb-3">"Best tree service in the area! Their attention to detail and expertise is unmatched. Great work!"</p>
+                        <p class="fw-bold mb-0">- Sarah Johnson</p>
+                        <small class="text-muted">Commercial Property Manager</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="review-card">
+                        <div class="mb-3">⭐⭐⭐⭐⭐</div>
+                        <p class="mb-3">"Quick response time and fair pricing. They handled our emergency tree removal professionally and safely."</p>
+                        <p class="fw-bold mb-0">- Mike Wilson</p>
+                        <small class="text-muted">Homeowner</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form">
+                        <h2 class="text-center section-title">Get Your Free Quote</h2>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="tel" class="form-control" placeholder="Your Phone" required>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-control" required>
+                                        <option value="">Select Service</option>
+                                        <option value="trimming">Tree Trimming</option>
+                                        <option value="removal">Tree Removal</option>
+                                        <option value="stump">Stump Grinding</option>
+                                        <option value="emergency">Emergency Service</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Tell us about your project" required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-custom btn-lg">Request Quote</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="script-font text-green mb-3">How High</h5>
+                    <p>Professional tree care solutions for residential and commercial properties.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <p>📞 (555) 123-4567<br>
+                        ✉️ info@howhightree.com<br>
+                        📍 Serving Greater Metro Area</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Hours of Operation</h5>
+                    <p>Monday - Friday: 7:00 AM - 6:00 PM<br>
+                        Saturday: 8:00 AM - 4:00 PM<br>
+                        Sunday: Emergency Services Only</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p class="mb-0">© 2024 How High Tree Service LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="btn btn-custom scroll-top" id="scrollTop">↑</button>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom jQuery -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                var target = $(this.hash);
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 70
+                }, 1000);
+            });
+
+            // Animate elements on scroll
+            function animateOnScroll() {
+                $('.animated-text').each(function() {
+                    var position = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    
+                    if (scroll > position - windowHeight + 100) {
+                        $(this).addClass('visible');
+                    }
+                });
+            }
+
+            // Initial animation check
+            animateOnScroll();
+
+            // Animate on scroll
+            $(window).scroll(function() {
+                animateOnScroll();
+
+                // Show/hide scroll to top button
+                if ($(this).scrollTop() > 300) {
+                    $('.scroll-top').fadeIn();
+                } else {
+                    $('.scroll-top').fadeOut();
+                }
+            });
+
+            // Scroll to top button click
+            $('.scroll-top').click(function() {
+                $('html, body').animate({scrollTop: 0}, 800);
+                return false;
+            });
+
+            // Form submission
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your inquiry! We will contact you shortly.');
+                this.reset();
+            });
+
+            // Service card hover animation
+            $('.service-card').hover(
+                function() {
+                    $(this).find('.service-icon').addClass('animate__animated animate__bounce');
+                },
+                function() {
+                    $(this).find('.service-icon').removeClass('animate__animated animate__bounce');
+                }
+            );
+
+            // Add active class to nav items on scroll
+            $(window).scroll(function() {
+                var scrollDistance = $(window).scrollTop();
+                
+                $('section').each(function(i) {
+                    if ($(this).position().top <= scrollDistance + 72) {
+                        $('.navbar-nav .nav-link.active').removeClass('active');
+                        $('.navbar-nav .nav-link').eq(i).addClass('active');
+                    }
+                });
+            }).scroll();
+        });
+    </script>
+</body>
+</html>
