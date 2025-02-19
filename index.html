@@ -13,6 +13,9 @@
     <link href="https://db.onlinewebfonts.com/c/754f77077b9c8ec931b67d31ef4543bb?family=Aerokids" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/aerokids" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         :root {
@@ -72,14 +75,58 @@
             position: relative;
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(to top, var(--dark-bg), transparent);
+        h1 {
+            font-size: 6vw;
+            text-align: center;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+
+        span {
+	        text-align: center;
+  	        font-size: 6vw;
+	        position: relative;
+	        font-weight: 900;
+	        text-transform: uppercase;
+	        
+	        
+	        color: transparent;
+
+	
+	        &:focus {
+		        outline: none;
+	        }
+        }
+
+        span::before, span::after {
+	        content: attr(data-heading);
+	        position: absolute;
+	        top: 0;
+	        left: 0;	
+        }
+
+
+        span::before {
+	        color: rgb(39, 204, 61);
+	        clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 0 60%)
+        }
+
+        span::after {
+	        color: white;
+	        clip-path: polygon(0 0, 100% 0%, 100% 36%, 0 56%);
+	        animation: slide 5s infinite;
+        }
+
+
+
+        @keyframes slide {
+	        0% {
+		        transform: translateX(0);
+	        }
+	        50% {
+		        transform: translate(-20px, 2%);
+	        }
         }
 
         .service-card {
@@ -101,7 +148,7 @@
             width: 80px;
             height: 80px;
             margin: 0 auto 1.5rem;
-            background: var(--primary-green);
+            background: none;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -244,12 +291,28 @@
         }
 
         @media (max-width: 768px) {
+
+            *{
+                text-align: center;
+            }
             .hero {
                 background-size: cover;
                 background-position: center;
                 background-size: 97%;
             }
+
+            #hero-lockup {
+                margin-top: 100px;
+            }
+            h1{
+                font-size: 10vw;
+            }
+            span {
+                font-size: 10vw;
+            }
         }
+
+        
     </style>
 </head>
 <body>
@@ -292,12 +355,12 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="text-white">Welcome to How High Tree Service LLC</h1>
-                    <p class="text-white">Your trusted partner in professional tree care.</p>
-                    <a href="#contact" class="btn btn-custom btn-lg animated-text" style="font-style: italic;">Get Your Free Quote</a>
+                <div class="col-lg-6 col-md-6 col-sm-12 text-center" id="hero-lockup">
+                    <h1>need a tree <br><span id="fractured" contenteditable data-heading="chopped">chopped</span> down?</h1>
+                    <p class="text-white">Fort Worth's most trusted tree service!</p>
+                    <a href="#contact" class="btn btn-custom btn-lg animated-text" style="font-style: italic;">Get Your Free Quote!</a>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <img src="img/logo.png" alt="How High Tree Service Logo" class="img-fluid">
                 </div>
             </div>
@@ -363,6 +426,34 @@
                     <a href="#contact" class="btn btn-custom mt-4">Schedule Service</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="meet-the-team">
+        <div class="container">
+            <h2 class="text-center section-title">Meet the Team</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="img/team1.jpg" alt="Team Member 1" class="img-fluid">
+                        <h3 class="team-name">Luis Luna</h3>
+                        <p class="team-role">Owner</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">   
+                        <img src="img/team2.jpg" alt="Team Member 2" class="img-fluid">
+                        <h3 class="team-name">Fernando Luna</h3>
+                        <p class="team-role">Project Manager</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-member">   
+                        <img src="img/team3.jpg" alt="Team Member 3" class="img-fluid">
+                        <h3 class="team-name">Ruben Gallegos</h3>
+                        <p class="team-role">Superintendent</p>
+                    </div>
+                </div>
         </div>
     </section>
 
@@ -548,6 +639,12 @@
                     }
                 });
             }).scroll();
+
+            var h1 = document.querySelector("h1");
+
+            h1.addEventListener("input", function() {
+                this.setAttribute("data-heading", this.innerText);
+            });
         });
     </script>
 </body>
