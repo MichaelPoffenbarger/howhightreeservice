@@ -386,8 +386,8 @@ background-size: 50px 50px;
 
         @media (max-width: 768px) {
 
-            *{
-                text-align: center;
+            body {
+                overflow-x: hidden;
             }
             .hero {
                 background-size: cover;
@@ -400,6 +400,9 @@ background-size: 50px 50px;
             }
             .btn-custom{
                 font-size: 0.9rem;
+                justify-content: center;
+                align-items: center;
+                display: flex;
             }
             
             h1{
@@ -482,8 +485,8 @@ background-size: 50px 50px;
                 
                 <div class="service-card col-md-6 col-lg-6" style="background-image: url(https://motionarray.imgix.net/motion-array-1365523-Lxjb1QYR27-high_0012.jpg?w=660&q=60&fit=max&auto=format); background-size: cover; background-position: center; min-height: 200px;"> 
                     
-                    <h3 class="service-title mt-5 pt-5">Tree Trimming</h3>
-                    <p class="service-description" style="color: white;">Safe and efficient removal of damaged or unwanted trees with expert precision and care.</p>
+                    <h3 class="service-title mt-5 pt-5 text-white" style="background-color: rgba(0, 0, 0, 0.5);">Tree Trimming</h3>
+                    <p class="service-description" style="color: white; background-color: rgba(0, 0, 0, 0.5); font-size: 0.8rem;">Keep your trees healthy and looking their best with professional tree trimming services that enhance growth, safety, and curb appeal.</p>
                 </div>
                 <div class="service-card col-md-6 col-lg-3" style="background-image: url(https://treenewal.com/wp-content/uploads/2022/05/Tree_Pruning_and_Tree_Trimming.jpg); background-size: cover; background-position: center; min-height: 200px;">
                     
@@ -496,8 +499,8 @@ background-size: 50px 50px;
                 </div>
                 <div class="service-card col-md-6 col-lg-6" style="background-image: url(https://us.123rf.com/450wm/guesswho/guesswho1005/guesswho100500059/7047086-spotlighted-bald-branches-in-winter-at-a-black-background.jpg?ver=6); background-size: cover; background-position: center; min-height: 200px;">
                     
-                    <h3 class="service-title mt-5 pt-5">Tree Removal</h3>
-                    <p class="service-description" style="color: white;">Safe and efficient removal of damaged or unwanted trees with expert precision and care.</p>
+                    <h3 class="service-title mt-5 pt-5 text-white" style="background-color: rgba(0, 0, 0, 0.5);">Tree Removal</h3>
+                    <p class="service-description" style="color: white; background-color: rgba(0, 0, 0, 0.5); font-size: 0.8rem;">Safely and efficiently remove unwanted or hazardous trees with professional tree removal services tailored to your property’s needs.</p>
                 </div>
                 <div class="service-card col-md-6 col-lg-3" style="background-image: url(https://sptreeservice.com/wp-content/uploads/2020/01/What-to-Expect-During-a-Tree-Removal-Service-_-Dallas-TX.jpg); background-size: cover; background-position: center; min-height: 200px;">
                     
@@ -508,10 +511,10 @@ background-size: 50px 50px;
                 <div class="service-card col-md-6 col-lg-3" style="background-image: url(https://cdn.prod.website-files.com/5fca74c42c2a8a74ea770a5e/5fd23720b2a5d92a46473999_stump-grinding-2.jpg); background-size: cover; background-position: center; min-height: 200px;">
                     
                 </div>
-                <div class="service-card col-md-6 col-lg-6" style="background-image: url(https://static.vecteezy.com/system/resources/previews/046/368/806/large_2x/stump-of-tree-with-rings-on-black-background-photo.jpg); background-size: cover; background-position: center; min-height: 200px;">
+                <div class="service-card col-md-6 col-lg-6" style="background-image: url(https://static.vecteezy.com/system/resources/previews/046/368/806/large_2x/stump-of-tree-with-rings-on-black-background-photo.jpg); background-size: cover; background-position: top center; min-height: 200px; ">
                     
-                    <h3 class="service-title mt-5 pt-5">Stump Grinding</h3>
-                    <p class="service-description" style="color: white;">Safe and efficient removal of damaged or unwanted trees with expert precision and care.</p>
+                    <h3 class="service-title mt-5 pt-5 text-white" style="background-color: rgba(0, 0, 0, 0.5);">Stump Grinding</h3>
+                    <p class="service-description" style="color: white; background-color: rgba(0, 0, 0, 0.67); font-size: 0.8rem;">Eliminate unsightly stumps and reclaim your outdoor space with professional stump grinding for a smooth, clean finish.</p>
                 </div>
                 
             </div>
@@ -529,7 +532,7 @@ background-size: 50px 50px;
                 </div>
                 <div class="col-lg-6">
                     <h2 class="section-title">About Us</h2>
-                    <p class="lead mb-4">With years of experience and dedication to quality, How High Tree Service LLC is your trusted partner in professional tree care.</p>
+                    <p class="lead mb-4" style="font-size: 1rem;">With years of experience and a commitment to quality, How High Tree Service LLC is your go-to expert for tree trimming, tree removal, and stump grinding. We help maintain the health and beauty of your trees, safely remove hazardous ones, and grind down unwanted stumps for a clean, polished landscape. Trust our professional team to enhance your property's safety, curb appeal, and overall value with top-quality tree care services.</p>
                     <ul class="feature-list list-unstyled">
                         <li>Licensed & Fully Insured</li>
                         <li>Experienced & Professional Team</li>
@@ -568,14 +571,12 @@ background-size: 50px 50px;
         </div>
     </section>
 
-    <section id="meet-the-team">
-        
-    </section>
+    
 
     <!-- Reviews Section -->
     <section id="reviews" class="py-5">
         <div class="container">
-            <h2 class="text-center section-title">Customer Reviews</h2>
+            <h2 class="section-title">Customer Reviews</h2>
             <div class="row g-4">
                 <div class="col-md-4 col-sm-6">
                     <div class="review-card">
@@ -659,10 +660,10 @@ background-size: 50px 50px;
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
-                        <img src="img/gallery1.jpg" alt="Gallery Image 1" class="img-fluid">
+                        <img src="https://motionarray.imgix.net/motion-array-1365523-Lxjb1QYR27-high_0012.jpg?w=660&q=60&fit=max&auto=format" alt="Gallery Image 1" class="img-fluid">
                     </div>
                     <div class="col-md-4 col-sm-6">
-                        <img src="img/gallery2.jpg" alt="Gallery Image 2" class="img-fluid">
+                        <img src="https://motionarray.imgix.net/motion-array-1365523-Lxjb1QYR27-high_0012.jpg?w=660&q=60&fit=max&auto=format" alt="Gallery Image 2" class="img-fluid">
                     </div>
                     <div class="col-md-4 col-sm-6">
                         <img src="img/gallery3.jpg" alt="Gallery Image 3" class="img-fluid">
